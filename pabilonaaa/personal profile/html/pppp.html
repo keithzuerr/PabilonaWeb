@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: linear-gradient(to left bottom, #000000, #790000);
+            color: #ccc;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh; 
+            overflow: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto; 
+            background-color: black;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgb(255, 0, 0);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 210px;
+            border-radius: 20%;
+            border: 1px solid #ffffff;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .subtitle {
+            font-family: sans-serif;
+            background-color: black;
+            font-size: 1.2em;
+            color: rgba(255, 0, 0, 0.5);
+            margin-top: 2px;
+            margin-bottom: 50px;
+        }
+        section h2 {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+            display: inline-block;
+            padding-bottom: 1px;
+        }
+        .about-me p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .education p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+        .skills li {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1em;
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .skills li::before {
+            content: "⏭";
+            position: relative;
+            left: 0;
+            color: rgba(255, 0, 0, 0.5);
+            font-size: 1.2em;
+        }
+        .project-grid {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        .project-grid img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 3px 5px rgba(255, 0, 0, 0.5);
+            margin-bottom: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.7);
+}
+        .feedback-form-container {
+            background: #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 0;
+            position: relative;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 20px;
+        }
+        .feedback-form-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #790000;
+            border-radius: 4px;
+        }
+        form input:focus,
+        form textarea:focus {
+            border-color: #000000;
+            outline: none;
+        }
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #790000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #007726;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #CCC;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../images/photo_2024-11-24_09-38-44-removebg-preview.png" alt="Profile Picture" class="profile-pic">
+            <h1>KEITH ZUER PABILONA</h1>
+            <p class="subtitle">'FILM STUDENT AND AUTHOR'</p>
+        </header>
+
+        <section class="about-me">
+            <h2>ABOUT ME</h2>
+            <p>
+                Hi! I’m Keith Zuer B. Pabilona, a Bachelor of Science in Animation and Multimedia Arts student at 
+                Northwestern Mindanao State College of Science and Technology. I aspire to become a filmmaker or director, 
+                combining my passion for storytelling and visual arts. As an author, I’ve shared my stories online, exploring 
+                creativity and connecting with readers worldwide.
+            </p>
+        </section>
+
+        <section class="education">
+            <h2>EDUCATION</h2>
+            <p>
+                <strong>Northwestern Mindanao State College of Science and Technology</strong><br>
+                (Bachelor of Science in Animation in Multimedia Arts)
+            </p>
+            <p>
+                <strong>Saint Columban College - Senior High School Department</strong><br>
+                (Arts and Design)
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Video Directing</li>
+                <li>Video Editing</li>
+                <li>Writing Stories</li>
+                <li>Photography</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>WRITING PROJECTS</h2>
+            <div class="project-grid">
+                <img src="../images/360497051-512-k601369.jpg" alt="Anyone's Red">
+                <img src="../images/225086923-256-k704846.jpg" alt="Falling">
+                <img src="../images/266607284-512-k704915.jpg" alt="Falling 2 You">
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>FILM PROJECTS</h2>
+            <div class="project-grid">
+                <img src="../images/87265821_856468958125902_2334624036035756032_n.jpg" alt="Film 1">
+                <img src="../images/438059569_963155299143847_6698564514363534736_n.jpg" alt="Film 2">
+                <img src="../images/405397840_654047800249377_2011665014315424197_n.jpg" alt="Film 3">
+            </div>
+        </section>
+
+        <div class="feedback-form-container">
+            <h1>Feedback Form</h1>
+            <form action="submit_feedback.php" method="POST">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+              <label for="feedback">Your Feedback:</label>
+              <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
+        
+              <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <p>FOR MORE INQUIRIES, CONTACT ME:</p>
+            <p>Email: zuerpabilona@gmail.com | Contact: 09706843632</p>
+            <p>Facebook: Keith Zuer | Twitter: @Yes_Xuer | Instagram: @keithzuer_</p>
+        </footer>
+    </div>
+</body>
+</html>
